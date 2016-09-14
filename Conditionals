@@ -27,6 +27,30 @@ public class Precedence {
 
 	}
 }
+-------------------------------------------------------------------
+Terenary Conditional:
+
+/* if/else statements can become lengthy even when you simply want to return a value depending on a Boolean expression. Fortunately, Java provides a shortcut that allows you to write if/else statements in a single line of code. It is called the ternary conditional statement.
+
+The term ternary comes from a Latin word that means "composed of three parts".
+
+These three parts are:
+
+A Boolean expression
+A single statement that gets executed if the Boolean expression is true
+A single statement that gets executed if the Boolean expression is false
+Here is an example of a ternary conditional statement: */
+
+public class Ternary {
+	public static void main(String[] args) {
+		
+		int fuelLevel = 3;
+
+		char canDrive = (fuelLevel > 0) ? 'Y' : 'N';   // returns 'Y' since fuellevel is greater than 0 i.e 3.
+		System.out.println(canDrive);
+
+	}
+}
 ---------------------------------------------------------------------
 public class Conditionals {
 	public static void main(String[] args) {
