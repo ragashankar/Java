@@ -6,5 +6,76 @@ public static void main(String[] args)
 	System.out.println("Raghav");
 }
 }
+----------------------------------------------------------------------------------------------------
+Integer Data type:
+The first data type we will use is int.
+
+int is short for integer, which are all positive and negative numbers, including zero. This number could represent the number of visits a website has received or the number of programming languages you know.
+The int data type only allows values between -2,147,483,648 and 2,147,483,647.
+
+public class Integer {
+	public static void main(String[] args) {
+
+		System.out.println(25);
+
+	}
+}
+
+Boolean Data type:
+
+The next data type  is the boolean.
+
+A boolean is a data type that can only be either true or false.
+
+public class Boolean {
+	public static void main(String[] args) {
+
+		System.out.println(true);
+
+	}
+}
+
+Character data type:
+
+The char data type is used to represent single characters. That includes the keys on a keyboard that are used to produce text.
+
+char is short for character and can represent a single character.
+All char values must be enclosed in single quotes, like this: 'G'.
+
+public class Character {
+	public static void main(String[] args) {
+
+		System.out.println('K');
+
+	}
+
+}
+
+---------------------------------------------------------------------------------------------------------------------
+Variables, Datatypes , assigning values to variables and storage:
+
+public class Variables {
+	public static void main(String[] args) {
+
+		int myNumber = 42;
+		boolean isFun = true; 
+		char movieRating = 'A'; 
+
+	}
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
+Comments: '//' for single line '/*...*/' for multiple lines
+
+public class Comments {
+	public static void main(String[] args) {
+
+	//	System.out.println("Noise!");
+		
 
 
+
+
+		
+	}
+}
