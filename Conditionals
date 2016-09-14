@@ -18,7 +18,16 @@ First, the ! Boolean operator in !(false) returns true.
 Second, true && false evaluates to false.
 Finally, the remaining expression true || false evaluates to true.
 ---------------------------------------------------------------------
+Precedence:
+public class Precedence {
+	public static void main(String[] args) {
 
+		boolean riddle = !( 1 < 8 || (5 > 2 && 3 < 5));
+		System.out.println(riddle);
+
+	}
+}
+---------------------------------------------------------------------
 public class Conditionals {
 	public static void main(String[] args) {
 
