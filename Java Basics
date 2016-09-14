@@ -94,26 +94,3 @@ public class Comments {
 		
 	}
 }
------------------------------------------------------------------------------------
-Arithmetic operations:
-
-public class Arithmetic {
-	public static void main(String[] args) {
-
-		int myNumber = 26*88;
-		System.out.println(myNumber);
-
-	}
-}
-
-Modulo operations:
-
-// Take 2 numbers such that when divided returns the remainder as 2 (% - Modulo oper).
-public class Modulo {
-	public static void main(String[] args) {
-
-		int myRemainder = 32 % 15;
-		System.out.println(myRemainder);
-
-	}
-} 
