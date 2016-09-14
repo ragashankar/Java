@@ -21,3 +21,13 @@ public class Modulo {
 	}
 } 
 
+---------------------------------------------------------------------------------------------------------
+Relational Oper: When run it returns either true or false depending upon the condition given
+
+public class RelationalOperators {
+	public static void main(String[] args) {
+
+		System.out.println(76 >= 89);
+
+	}
+}                                                         //Returns false
