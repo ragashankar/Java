@@ -1,0 +1,81 @@
+1. The Java programming language is statically-typed, which means that all variables must first be declared before they can be used
+
+byte: 8 bit signed, two's complement int . -128 to 127
+
+short: 16 bit signed, two's complement -32768 to 32767
+
+int : 32 bit signed two's comp. -2^31 to (2^31) - 1. Java SE 8  - Integer class to represent int as 0 to 2^32 -1 - unsigned
+
+long: 64 bit two's comp - 2^63 to 2^63 - 1. Java SE 8 - Long class contains unsigned 0 to 2^64-1.
+
+float 32 bit IEEE 754, saves lot of  memory space of floating point numbers if used instead of double. Never to be used for precise values such as currency
+
+double 64 bit IEEE 754, For decimal values, double is genereal choice Never to be used for precise values.
+
+boolean - true/false - one bit info.  default val  - false
+
+char - 16 bit Unicode character. value of 0 to 65535 (\uoooo to \uffff)
+
+Other data types:
+
+String - java.lang.String - immutable - default val is null
+
+
+-----------------------------------------------------------------------
+Literal : You may have noticed that the new keyword isn't used when initializing a variable of a primitive type. Primitive types are special data types built into the language; they are not objects created from a class. A literal is the source code representation of a fixed value; literals are represented directly in your code without requiring computation. As shown below, it's possible to assign a literal to a variable of a primitive type:
+
+boolean result = true;
+char capitalC = 'C';
+byte b = 100;
+short s = 10000;
+int i = 100000;
+
+An integer literal is of type long if it ends with the letter L or l; otherwise it is of type int. 
+// The number 26, in decimal - base 10
+int decVal = 26;  (0 to 9)
+//  The number 26, in hexadecimal - base 16
+int hexVal = 0x1a; (A to F)
+// The number 26, in binary - base 2
+int binVal = 0b11010;            ( 0 and 1)
+
+A floating-point literal is of type float if it ends with the letter F or f; otherwise its type is double and it can optionally end with the letter D or d.
+double d1 = 123.4;
+// same value as d1, but in scientific notation
+double d2 = 1.234e2;
+float f1  = 123.4f;
+
+Literals of types char and String may contain any Unicode (UTF-16) characters. If your editor and file system allow it, you can use such characters directly in your code. If not, you can use a "Unicode escape" such as '\u0108' (capital C with circumflex), or "S\u00ED Se\u00F1or" (Sí Señor in Spanish). Always use 'single quotes' for char literals and "double quotes" for String literals. Unicode escape sequences may be used elsewhere in a program (such as in field names, for example), not just in char or String literals.
+
+The Java programming language also supports a few special escape sequences for char and String literals: \b (backspace), \t (tab), \n (line feed), \f (form feed), \r (carriage return), \" (double quote), \' (single quote), and \\ (backslash).
+
+null is often used in programs as a marker to indicate that some object is unavailable.
+
+Finally, there's also a special kind of literal called a class literal, formed by taking a type name and appending ".class"; for example, String.class. This refers to the object (of type Class) that represents the type itself.
+
+Underscore char in numeric literals:
+In Java SE 7 and later, any number of underscore characters (_) can appear anywhere between digits in a numerical literal. This feature enables you, for example. to separate groups of digits in numeric literals, which can improve the readability of your code.
+
+Example:
+
+long creditCardNumber = 1234_5678_9012_3456L;
+long socialSecurityNumber = 999_99_9999L;
+float pi =  3.14_15F;
+long hexBytes = 0xFF_EC_DE_5E
+
+Not allowed:
+
+// Invalid: cannot put underscores
+// adjacent to a decimal point
+float pi1 = 3_.1415F;
+// Invalid: cannot put underscores 
+// adjacent to a decimal point
+float pi2 = 3._1415F;
+// Invalid: cannot put underscores 
+// prior to an L suffix
+long socialSecurityNumber1 = 999_99_9999_L;
+int x5 = 0x_52;
+// OK (hexadecimal literal)
+int x6 = 0x5_2; 
+// Invalid: cannot put underscores
+// at the end of a number
+int x7 = 0x52_;
