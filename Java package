@@ -1,0 +1,10 @@
+Use import keyword
+
+import Java.util.Random - random package
+
+import.Java.util.* - imports all packages (* is a wildcard)
+
+Java.lang - Doesn't need any import keyword
+
+
+
