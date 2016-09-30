@@ -1,0 +1,22 @@
+String s1, s2;
+String s3 = "yes", s4 = "no";
+Four String variables were declared: s1, s2, s3, and s4. You can declare many variables
+in the same declaration as long as they are all of the same type.
+
+int i1,i2,i3=0; // 3 var are declared and only one is initialized
+
+Another way the exam could try to trick you is to show you code like this line:
+int num, String value; // DOES NOT COMPILE
+
+
+
+To make sure you understand this, see if you can fi gure out which of the following are
+legal declarations. “Legal,” “valid,” and “compiles” are all synonyms in the Java exam
+world. We try to use all the terminology you could encounter on the exam.
+boolean b1, b2; // legal
+String s1 = "1", s2; // valid
+double d1, double d2; // Not legal, since double data type for more than one var cannot be typed in the same line
+int i1; int i2; // Legal, since sep by (;)
+int i3; i4; // Not compile since i4 is not declared with a data type
+
+
