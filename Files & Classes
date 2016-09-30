@@ -1,0 +1,9 @@
+You need to know one more thing about class structure for the OCA exam: multiple
+classes can be defi ned in the same fi le, but only one of them is allowed to be public. The
+public class matches the name of the fi le. For example, these two classes must be in a fi le
+named Meerkat.java:
+1: public class Meerkat { }
+2: class Paw { }
+A fi le is also allowed to have neither class be public. As long as there isn’t more than
+one public class in a fi le, it is okay. On the OCP exam, you’ll also need to understand inner
+classes, which are classes within a class.
