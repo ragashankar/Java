@@ -1,0 +1,46 @@
+Primitive:
+
+byte - 8 buts - -128 to 127
+
+short 16 bits - -(2^16/2) to (2^16/2) - 1
+
+int - 32 bits
+
+long - 64 bits
+
+float - 32 bits decimal
+
+double 64
+
+char - 0 to 65535
+
+Base - 10 (0 to 9)
+
+hexa -A to F
+
+binary 0 and 1
+
+Reference:
+
+A reference type refers to an object (an instance of a class). Unlike primitive types that hold
+their values in the memory where the variable is allocated, references do not hold the value
+of the object they refer to. Instead, a reference “points” to an object by storing the memory
+address where the object is located, a concept referred to as a pointer.
+
+Declaration - java.util.Date today;
+String greeting;
+
+Ref to new objs - today = new java.util.Date();
+greeting = "How are you?";
+          
+          dat mon year
+today  -> 29 10 1962
+
+KEY DIFFERENCES BETWWEN PRIMITIVE AND REFERNCE
+
+There are a few important differences you should know between primitives and reference
+types. First, reference types can be assigned null, which means they do not currently refer
+to an object. Primitive types will give you a compiler error if you attempt to assign them
+null. In this example, value cannot point to null because it is of type int:
+int value = null; // DOES NOT COMPILE
+String s = null;
