@@ -1,0 +1,76 @@
+Local Var:
+
+A local variable is a variable defined within a method. Local variables must be initialized
+before use. They do not have a default value and contain garbage data until initialized. The
+compiler will not let you read an uninitialized value. For example, the following code
+generates a compiler error:
+4: public int notValid() {
+5: int y = 10;
+6: int x;
+7: int reply = x + y; // DOES NOT COMPILE
+8: return reply;
+9: }
+
+Until x is assigned a value, it cannot appear within an expression, and the compiler will
+gladly remind you of this rule. The compiler knows your code has control of what happens
+inside the method and can be expected to initialize values
+
+public void findAnswer(boolean check) {
+int answer;
+int onlyOneBranch;
+if (check) {
+onlyOneBranch = 1;
+answer = 1;
+} else {
+answer = 2;
+}
+System.out.println(answer);
+System.out.println(onlyOneBranch); // DOES NOT COMPILE
+}
+
+Local variables can never have a scope larger than the method they are defi ned in.
+However, they can have a smaller scope. Consider this example:
+3: public void eatIfHungry(boolean hungry) {
+4: if (hungry) {
+5: int bitesOfCheese = 1;
+6: } // bitesOfCheese goes out of scope here
+7: System.out.println(bitesOfCheese);// DOES NOT COMPILE
+8: }// hungry has a scope
+
+
+public void eatIfHungry(boolean hungry) {
+17: if (hungry) {
+18: int bitesOfCheese = 1;
+19: {
+20: boolean teenyBit = true;
+21: System.out.println(bitesOfCheese);
+22: } // teenyBit does not compile
+23: }//bitsOfCheese
+24: System.out.println(teenyBit); // DOES NOT COMPILE
+25: }
+
+-----------------------------------------------------------------------------------------------------------------------------------
+Instance and class variables
+Default Initialization:
+
+boolean  - false
+byte, short, int, long  - 0 (in the type’s bit-length)
+float, double - 0.0 (in the type’s bit-length)
+char - '\u0000' (NUL)
+All object references (everything else) null
+
+
+Let’s do one more example to make sure you have a handle on this. Again, try to fi gure
+out the type of the four variables and when they go into and out of scope.
+1: public class Mouse {
+2: static int MAX_LENGTH = 5;
+3: int length;
+4: public void grow(int inches) {
+5: if (length < MAX_LENGTH) {
+6: int newSize = length + inches;
+7: length = newSize;
+8: }
+9: }
+10: }
+In this class, we have one class variable (MAX_LENGTH), one instance variable (length),
+and two local variables (inches and newSize.)
