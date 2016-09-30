@@ -1,0 +1,55 @@
+Creating Objetcs:
+
+Random r = new Random();
+First you declare the type that you’ll be creating (Random) and give the variable a name
+(r). This gives Java a place to store a reference to the object. Then you write new Random()
+to actually create the object.
+
+
+
+Instance Intializers;
+
+Sometimes code blocks are inside a method. These are run when the method is called.
+Other times, code blocks appear outside a method. These are called instance initializers.
+
+
+Constructors:
+public class Chick {
+public Chick() {
+System.out.println("in constructor");
+}
+}
+There are two key points to note about the constructor: the name of the constructor
+matches the name of the class, and there’s no return type.
+
+public void Chick() {} - Not a constructor
+
+The purpose of a constructor is to initialize fi elds, although you can put any code in
+there. Another way to initialize fi elds is to do so directly on the line on which they’re
+declared. This example shows both approaches:
+public class Chicken {
+int numEggs = 0;// initialize on line
+String name;
+public Chicken() {
+name = "Duke";// initialize in constructor
+} }
+
+Order of Initialization
+Fields and instance initializer blocks are run in the order in which they appear in
+the file.
+The constructor runs after all fields and instance initializer blocks have run.
+
+public class Egg {
+public Egg() {
+number = 5;
+}
+public static void main(String[] args) {
+Egg egg = new Egg();
+System.out.println(egg.number);
+}
+private int number = 3;
+{ number = 4; } }
+If you answered 5, you got it right. Fields and blocks are run fi rst in order, setting
+number to 3 and then 4. Then the constructor runs, setting number to 5.
+
+
