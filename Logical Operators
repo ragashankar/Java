@@ -1,0 +1,3 @@
+&,|,^ - Bitwise logical oper - Evaluates both the LHS and RHS
+
+&&,|| - logical, eval only LHS, if LHS is true, displays else eval RHS
