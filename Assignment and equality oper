@@ -1,0 +1,11 @@
+The comparisons for equality are limited to these three cases, so you cannot mix and
+match types. For example, each of the following would result in a compiler error:
+boolean x = true == 3; // DOES NOT COMPILE
+boolean y = false != "Giraffe"; // DOES NOT COMPILE
+boolean z = 3 == "Kangaroo"; // DOES NOT COMPILE
+Pay close attention to the data types when you see an equality operator on the exam.
+The exam creators also have a habit of mixing assignment operators and equality operators,
+as in the following snippet:
+boolean y = false;
+boolean x = (y = true);
+System.out.println(x); // Outputs true
