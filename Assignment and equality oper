@@ -9,3 +9,12 @@ as in the following snippet:
 boolean y = false;
 boolean x = (y = true);
 System.out.println(x); // Outputs true
+
+For object comparison, the equality operator is applied to the references to the objects,
+not the objects they point to. Two references are equal if and only if they point to the same
+object, or both point to null. Let’s take a look at some examples:
+File x = new File("myFile.txt");
+File y = new File("myFile.txt");
+File z = x;
+System.out.println(x == y); // Outputs false
+System.out.println(x == z); // Outputs true
