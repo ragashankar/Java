@@ -1,3 +1,45 @@
+Switch case:
+int dayOfWeek = 5;
+switch(dayOfWeek) {
+default:
+System.out.println("Weekday");
+break;
+case 0:
+System.out.println("Sunday");
+break;
+case 6:
+System.out.println("Saturday");
+break;
+}
+With a value of dayOfWeek of 5, this code will output:
+Weekday
+
+int dayOfWeek = 5;
+switch(dayOfWeek) {
+case 0:
+System.out.println("Sunday");
+default:
+System.out.println("Weekday");
+case 6:
+System.out.println("Saturday");
+break;
+}
+
+This code looks a lot like the previous example except two of the break statements have
+been removed and the order has been changed. This means that for the given value of day-
+OfWeek, 5, the code will jump to the default block and then execute all of the proceeding
+case statements in order until it fi nds a break statement or fi nishes the structure:
+Weekday
+Saturday
+
+
+
+
+
+
+
+
+
 private int getSortOrder(String firstName, final String lastName) {
 String middleName = "Patricia";
 final String suffix = "JR";
