@@ -1,0 +1,25 @@
+Assignment oper:
+
+int x = 1.0; // DOES NOT COMPILE
+short y = 1921222; // DOES NOT COMPILE
+int z = 9f; // DOES NOT COMPILE
+long t = 192301398193810323; // DOES NOT COMPILE
+The fi rst statement does not compile because you are trying to assign a double 1.0 to an
+integer value. Even though the value is a mathematic integer, by adding .0, you’re instructing
+the compiler to treat it as a double. The second statement does not compile because the
+literal value 1921222 is outside the range of short and the compiler detects this. The third
+statement does not compile because of the f added to the end of the number that instructs
+the compiler to treat the number as fl oating-point value. Finally, the last statement does not
+compile because Java interprets the literal as an int and notices that the value is larger than
+int allows. The literal would need a postfi x L to be considered a long.
+
+Casting Primitive Values
+We can fi x the examples in the previous section by casting the results to a smaller data
+type. Casting primitives is required any time you are going from a larger numerical data
+type to a smaller numerical data type, or converting from a fl oating-point number to an
+integral value.
+int x = (int)1.0;
+short y = (short)1921222; // Stored as 20678
+Using Additional Binary Operators 61
+int z = (int)9f;
+long t = 192301398193810323L;
