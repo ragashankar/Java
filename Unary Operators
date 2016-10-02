@@ -1,0 +1,29 @@
+Based on the description, it might be obvious that some operators require the variable
+or expression they’re acting upon to be of a specifi c type. For example, you cannot apply
+a negation operator, -, to a boolean expression, nor can you apply a logical complement
+operator, !, to a numeric expression. Be wary of questions on the exam that try to do this,
+as they’ll cause the code to fail to compile. For example, none of the following lines of code
+will compile:
+int x = !5; // DOES NOT COMPILE
+boolean y = -true; // DOES NOT COMPILE
+boolean z = !0; // DOES NOT COMPILE
+
+Inc and Dec operators:
+
+Increment and decrement operators, ++ and --, respectively, can be applied to numeric
+operands and have the higher order or precedence, as compared to binary operators. In
+other words, they often get applied fi rst to an expression.
+
+If the operator is placed before the operand, referred to as the pre-increment operator
+and the pre-decrement operator, then the operator is applied fi rst and the value return
+is the new value of the expression. Alternatively, if the operator is placed after the operand,
+referred to as the post-increment operator and the post-decrement operator, then the original
+value of the expression is returned, with operator applied after the value is returned.
+
+int counter = 0;
+System.out.println(counter); // Outputs 0
+System.out.println(++counter); // Outputs 1
+System.out.println(counter); // Outputs 1
+System.out.println(counter--); // Outputs 1
+System.out.println(counter); // Outputs 0
+
