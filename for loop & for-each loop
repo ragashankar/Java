@@ -1,0 +1,74 @@
+1. Creating an Infinite Loop
+for( ; ; ) {
+System.out.println("Hello World");
+}
+
+Adding Multiple Terms to the for Statement
+int x = 0;
+for(long y = 0, z = 4; x < 5 && y < 10; x++, y++) {
+System.out.print(y + " ");
+}
+System.out.print(x);
+
+Using Incompatible Data Types in the Initialization Block
+for(long y = 0, int x = 4; x < 5 && y<10; x++, y++) { // DOES NOT COMPILE
+System.out.print(x + " ");
+}
+
+5. Using Loop Variables Outside the Loop
+for(long y = 0, x = 4; x < 5 && y < 10; x++, y++) {
+System.out.print(y + " ");
+}
+System.out.print(x); // DOES NOT COMPILE
+
+Redeclaring a Variable in the Initialization Block
+int x = 0;
+for(long y = 0, x = 4; x < 5 && y < 10; x++, y++) { // DOES NOT COMPILE
+System.out.print(x + " ");
+}
+
+--------------------------------------------------------------------------------------------------------------------------------
+for-each
+
+Let’s review some examples:
+■ What will this code output?
+final String[] names = new String[3];
+names[0] = "Lisa";
+names[1] = "Kevin";
+names[2] = "Roger";
+for(String name : names) {
+System.out.print(name + ", ");
+}
+This code will compile and print:
+Lisa, Kevin, Roger,
+■ What will this code output?
+java.util.List<String> values = new java.util.ArrayList<String>();
+values.add("Lisa");
+values.add("Kevin");
+values.add("Roger");
+for(String value : values) {
+System.out.print(value + ", ");
+}
+This code will compile and print the same values:
+Lisa, Kevin, Roger,
+When you see a for-each loop on the exam, make sure the right-hand side is an array
+or Iterable object and the left-hand side has a matching type. For example, the two
+examples that follow will not compile.
+■ Why will the following fail to compile?
+String names = "Lisa";
+for(String name : names) { // DOES NOT COMPILE
+System.out.print(name + " ");
+}
+In this example, the String names is not an array, nor does it implement java.lang.
+Iterable, so the compiler will throw an exception since it does not know how to iterate
+over the String.
+■ Why will the following fail to compile?
+String[] names = new String[3];
+for(int name : names) { // DOES NOT COMPILE
+System.out.print(name + " ");
+}
+
+This code will fail to compile because the left-hand side of the for-each statement does
+not defi ne an instance of String. Notice that in this last example, the array is initialized
+with three null pointer values.
+
